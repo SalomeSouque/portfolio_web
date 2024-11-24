@@ -279,10 +279,18 @@ a{
     width: 100%;
     border-left: #052032 1px solid;
 }
-form{
+.navdown{
     display: flex;
-    flex-direction: column;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: #CAEAFF;
 }
-.field{
-
+.rightnavdown{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 45px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
