@@ -1,7 +1,7 @@
 // Wrap.innerHTML='<h1>Hello</h1> '
 
 
-fetch("https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.gitlab.io/json/escape-game.json")   //J'appel mon fichier json qui est sur une autre page
+fetch("file:///C:/Users/S-SOUQUE/OneDrive%20-%20Aescra%20Emlyon%20Business%20School/Documents/Cours/portfolio_web/texte.json")   //J'appel mon fichier json qui est sur une autre page
     .then(response =>{
         if (!response.ok) {
             throw new Error ("Failed to load JSON data")
@@ -27,20 +27,18 @@ fetch("https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.g
 
         let card = document.createElement ("div");
         card.className = "card";
-
-
-        card.appendChild(div);
+        div.appendChild(card);
 
         let image = document.createElement ("img");
         image.className = "image";
         image.textContent = 
-        image.appendChild(card);
+        card.appendChild(image);
 
 
         let titre = document.createElement("h2");
         titre.className = "titre";
         titre.textContent = data.titre;
-        titre.appendChild(card);
+        card.appendChild(titre);
     }})
     
   
