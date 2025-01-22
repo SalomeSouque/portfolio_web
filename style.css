@@ -294,3 +294,79 @@ a{
     margin-top: 5px;
     margin-bottom: 10px;
 }
+#image1{
+    background-image: url(Capture.PNG);
+    background-size: contain;
+    height: 149px;
+    width: 335px;
+    background-repeat: no-repeat;
+    border: solid, 1px,;
+    border-radius: 6px;
+}
+#image2{
+    background-image: url(Capture_2.PNG);
+    background-size: contain;
+    height: 149px;
+    width: 335px;
+    background-repeat: no-repeat;
+    border: solid, 1px,;
+    border-radius: 6px;
+}
+#image3{
+    background-image: url(Capture3.PNG);
+    background-size: contain;
+    height: 149px;
+    width: 335px;
+    background-repeat: no-repeat;
+    border: solid, 1px,;
+    border-radius: 6px;
+}
+#image4{
+    background-image: url(Capture4.PNG);
+    background-size: contain;
+    height: 149px;
+    width: 335px;
+    background-repeat: no-repeat;
+    border: solid, 1px,;
+    border-radius: 6px;
+}
+#image5{
+    background-image: url(Capture5.PNG);
+    background-size: contain;
+    height: 149px;
+    width: 335px;
+    background-repeat: no-repeat;
+    border: solid, 1px,;
+    border-radius: 6px;
+}
+#image6{
+    background-image: url(Capture6.PNG);
+    background-size: contain;
+    height: 149px;
+    width: 335px;
+    background-repeat: no-repeat;
+    border: solid, 1px,  #052032;
+    border-radius: 6px;
+}
+/* #image7{
+    background-image: url(Capture7.PNG);
+    background-size: contain;
+    height: 149px;
+    width: 335px;
+    background-repeat: no-repeat;
+    border: solid, 1px,;
+    border-radius: 6px;
+} */
+.trait{
+    background-color: #052032;
+    width: 316px;
+    height: 1px;
+    margin: 10px;
+}
+.titre{
+    color: aqua;
+}
+#ima{
+    background-color: #052032;
+    background-size: 400px;
+}

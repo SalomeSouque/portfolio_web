@@ -1,7 +1,4 @@
-// Wrap.innerHTML='<h1>Hello</h1> '
-
-
-fetch("file:///C:/Users/S-SOUQUE/OneDrive%20-%20Aescra%20Emlyon%20Business%20School/Documents/Cours/portfolio_web/texte.json")   //J'appel mon fichier json qui est sur une autre page
+fetch("./texte.json")   //J'appel mon fichier json qui est sur une autre page
     .then(response =>{
         if (!response.ok) {
             throw new Error ("Failed to load JSON data")
@@ -12,6 +9,7 @@ fetch("file:///C:/Users/S-SOUQUE/OneDrive%20-%20Aescra%20Emlyon%20Business%20Sch
     })
     .then(data =>{
 
+    console.log(data);
     
 
     
@@ -21,24 +19,44 @@ fetch("file:///C:/Users/S-SOUQUE/OneDrive%20-%20Aescra%20Emlyon%20Business%20Sch
         let keys = Object.keys(data);
         console.log(keys);
 
-
         let div = document.getElementById ("Div");
+        let indeximage =0;
 
+        data.web.forEach(element => {
 
-        let card = document.createElement ("div");
-        card.className = "card";
-        div.appendChild(card);
-
-        let image = document.createElement ("img");
-        image.className = "image";
-        image.textContent = 
+            let card = document.createElement ("div");
+            card.className = "card";
+            div.appendChild(card);
+        
+        indeximage++
+        let image = document.createElement ("div");
+        image.id = "image"+indeximage;
+        image.textContent = element.image;
         card.appendChild(image);
-
+        console.log(image);
+        
+        
+        let trait = document.createElement("div");
+        trait.className = "trait";
+        trait.textContent = element.trait;
+        card.appendChild(trait);
 
         let titre = document.createElement("h2");
         titre.className = "titre";
-        titre.textContent = data.titre;
+        titre.textContent = element.titre;
         card.appendChild(titre);
+
+        let description = document.createElement("p");
+        description.className = "description";
+        description.textContent = element.description;
+        card.appendChild(description);
+
+     
+        
+
+        });
+        
+        
     }})
     
   
