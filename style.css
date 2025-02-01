@@ -508,9 +508,9 @@ a {
     height: 260px;
 }
 
-.fa-solid {
+/* .fa-solid {
     margin-right: 20px;
-}
+} */
 
 .minicard {
     background-color: #CAEAFF;
@@ -729,3 +729,300 @@ margin: 5px;
     margin-left: 10px;
 
 }
+
+
+
+
+
+/*Chatbot CSS créer entièrement avec ChatGPT4
+
+/* Charger la police Inconsolata */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+/* Appliquer la police Inconsolata à tout le site */
+body {
+    font-family: 'Inconsolata', monospace;
+    color: #052032; /* Couleur du texte */
+}
+
+/* Style du bouton rond flottant pour ouvrir le chat */
+#chat-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: #F4EEC2; /* Couleur du bouton */
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #052032;
+}
+
+/* Fenêtre du chatbot */
+#chat-window {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 35%;
+    height: 60%;
+    background-color: #F0F9FF;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    transition: all 0.3s ease; /* Transition douce pour l'ouverture */
+    display: flex;
+    opacity: 0; /* Initialement caché */
+    transform: scale(0); /* Initialement réduit */
+}
+
+/* Animation de scaling pour l'ouverture/fermeture du chat */
+@keyframes scale {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Appliquer l'animation lors de l'ouverture */
+#chat-window.open {
+    animation: scale 0.3s ease-in-out forwards; /* L'animation d'ouverture avec un scaling */
+}
+
+/* Bande du haut de la fenêtre du chat */
+#chat-window .top-bar {
+    background-color: #CAEAFF;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #052032;
+    font-size: 18px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Bande du bas de la fenêtre du chat */
+#chat-window .bottom-bar {
+    background-color: #CAEAFF;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Zone de chat (bulle de discussion) */
+#chatbox {
+    width: 100%;
+    height: 80%;
+    overflow-y: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column; /* Disposer les messages verticalement */
+    gap: 10px; /* Ajouter de l'espace entre les messages */
+    padding-bottom: 10px; /* Un peu d'espace en bas pour les messages */
+}
+
+/* Personnalisation de la barre de défilement */
+#chatbox::-webkit-scrollbar {
+    width: 6px; /* Plus fine que la précédente */
+}
+
+/* Style de la barre de défilement (le "pouce") */
+#chatbox::-webkit-scrollbar-thumb {
+    background-color: #052032; /* Couleur du pouce (en harmonie avec la couleur du texte) */
+    border-radius: 10px;
+}
+
+/* Style de la barre de défilement quand elle est active */
+#chatbox::-webkit-scrollbar-thumb:hover {
+    background-color: #FFD6D6; /* Couleur au survol */
+}
+
+/* Style de la bulle de message */
+.chat-bubble {
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+/* Bulle de message de l'utilisateur alignée à droite et de couleur #FFD6D6 */
+.user {
+    background-color: #FFD6D6; /* Couleur de fond de la bulle de l'utilisateur */
+    align-self: flex-end; /* Aligner la bulle de l'utilisateur à droite de la fenêtre */
+    text-align: right;
+    margin-right: 10px; /* Décaler la bulle du bord de la fenêtre */
+}
+
+/* Bulle de message du bot alignée à gauche */
+.bot {
+    background-color: #F5DEFF;
+    align-self: flex-start;
+    text-align: left;
+}
+
+/* Style de l'input */
+#user-input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #052032;
+    background-color: #F0F9FF;
+    color: #052032;
+    font-family: 'Inconsolata', monospace;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Réduire l'épaisseur du contour de l'input */
+#user-input {
+    border-width: 1px; /* Réduit l'épaisseur du contour */
+}
+
+/* Supprimer la flèche du champ de numéro (input) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Style du bouton envoyer avec une flèche ou avion */
+#send-btn {
+    width: 15%; /* 15% de la largeur du parent */
+    height: 40px; /* Hauteur ajustée */
+    background-color: #F4EEC2; /* Couleur du bouton */
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin-left: 10px; /* Ajouter un espacement entre l'input et le bouton */
+}
+
+/* Icône dans le bouton envoyer */
+#send-btn i {
+    font-size: 20px;
+}
+
+/* Effet hover sur le bouton envoyer */
+#send-btn:hover {
+    background-color: #FFB3B3;
+}
+
+/* Personnalisation de la barre de défilement dans la fenêtre du chat */
+#chatbox::-webkit-scrollbar {
+    width: 6px; /* Taille plus fine */
+}
+
+#chatbox::-webkit-scrollbar-thumb {
+    background-color: #052032; /* Couleur du texte */
+    border-radius: 10px;
+}
+
+/* Le bouton d'envoi */
+#send-btn:hover {
+    background-color: #FFB3B3;
+}
+
+/* Ajouter une animation des points qui clignotent */
+.chat-bubble.bot.typing .dot {
+    font-size: 20px;
+    color: #052032;
+    animation: blink 1s infinite step-start;
+}
+
+/* Animation pour faire clignoter les points un par un */
+.chat-bubble.bot.typing .dot:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.chat-bubble.bot.typing .dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.chat-bubble.bot.typing .dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* Animation de clignotement */
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+/* Style de la bulle "Une question ?" */
+.question-bubble {
+    position: fixed;
+    bottom: 90px; /* Ajuster la position par rapport au bouton */
+    right: 30px; /* Aligné avec le bouton */
+    background-color:#F5DEFF;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Style pour la croix de fermeture */
+.close-bubble {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #052032;
+}
+
+
+#close-bubble:hover {
+    color: #FF6B6B; /* Changer de couleur au survol */
+}
+
+/* Style pour le bouton chat (inchangé) */
+#chat-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: #F4EEC2;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #052032;
+    z-index: 5; /* Assurez-vous que le bouton soit sous la bulle */
+}
+

@@ -242,6 +242,41 @@
         </div>
 
     </footer>
+    <button id="chat-btn">
+        <i class="fa-solid fa-robot"></i>
+    </button>
+<!-- ChatBot créer avec ChatGPT4 -->
+<!-- Bulle "Une question ?" au-dessus du bouton du chatbot -->
+<div id="question-bubble" class="question-bubble">
+    <span>Une question ?</span>
+    <button id="close-question-bubble" class="close-bubble">×</button> <!-- Croix de fermeture -->
+</div>
+
+
+    <div id="chat-window">
+        <div class="top-bar">Mon chatbot</div>
+        <div id="chatbox">
+            <div class="chat-bubble bot">Bonjour ! Choisissez une question en entrant un numéro (1-10) :</div>
+            <div class="chat-bubble bot">1. Quel est ton nom ?</div>
+            <div class="chat-bubble bot">2. Que fais-tu ?</div>
+            <div class="chat-bubble bot">3. Où es-tu situé ?</div>
+            <div class="chat-bubble bot">4. Quels sont tes services ?</div>
+            <div class="chat-bubble bot">5. Comment puis-je te contacter ?</div>
+            <div class="chat-bubble bot">6. As-tu des références ?</div>
+            <div class="chat-bubble bot">7. Quel est ton expérience ?</div>
+            <div class="chat-bubble bot">8. Combien de temps prends-tu pour un projet ?</div>
+            <div class="chat-bubble bot">9. Quels outils utilises-tu ?</div>
+            <div class="chat-bubble bot">10. Quel est ton tarif ?</div>
+        </div>
+        <div class="bottom-bar">
+            <input type="number" id="user-input" placeholder="Entrez un numéro de question..." autocomplete="off">
+            <button id="send-btn">
+                <i class="fa-solid fa-arrow-up"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="chatbot.js"></script>
     <script src="script.js"> </script>
 </body>
 
