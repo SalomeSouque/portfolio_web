@@ -13,8 +13,8 @@
         "text-3": "MY POTENTIAL, YOUR SUPPORT",
         "text-4": "English",
         "text-5": "Français",
-        "text-6": "LA TOILE- EMLYON BUSINESS SCHOOL",
-        "text-7": "Trust me in graduating in AI. I entered in last October in a four month formation within de emlyon business school with the objectif of introduce myself to info. During this period I have learned in two month to master the basics of three language: HTML, CSS and JAVAScript. Moreover, I have acquire skills with different software such as figma, Airtable, Zapier, Webflow (...). You can see down-below the work I have done during this time :",
+        "text-6": "Bienvenue sur mon portfolio",
+        "text-7": "Faites-moi confiance concernant mon parcours en intelligence artificielle. J'ai commencé un programme de quatre mois en octobre dernier à l'emlyon business school avec pour objectif de m'initier à l'informatique. Durant cette période, j'ai appris à maîtriser les bases de quatre langages de programmation en deux mois : HTML, CSS, JavaScript et Python (ce site web est d'ailleurs conçu avec HTML, CSS et JavaScript). De plus, j'ai acquis des compétences dans l'utilisation de divers logiciels tels que GitHub,  GitLab, Jupyter Notebook, VScode, PyCharm, Roboflow Figma, Canva, Airtable, Zapier et Webflow, entre autres. Je m'engage maintenant dans une formation en alternance en intelligence artificielle chez Simplon et je recherche une entreprise à partir de janvier 2026 pour compléter ma formation. Mon objectif est d'obtenir un diplôme de niveau Bac+5 et de travailler ensuite dans les domaines de l'écologie ou de la médecine. J'ai hâte d'en apprendre davantage sur l'IA avec vous ! Vous pouvez voir ci-dessous les travaux que j'ai réalisés jusqu'à présent :",
         "text-8": "S",
         "text-9": "Salomé Souque",
         "text-10": "Qui suis-je ?",
@@ -66,7 +66,7 @@
 
 
     "title": "Mon Portfolio",
-    "description": "Bienvenue sur mon portfolio. Je suis développeur web.",
+    "description": "Bienvenue sur mon portfolio. Je suis actuellement dans une formation en alternance Dev-IA au seins de l'école Simplon. Je recherche d'une alternance pour janvier 2026, je suis motivée et j’ai hâte d’en apprendre plus sur l’IA.",
     "cards": [
         {
             "trait": "",
@@ -86,17 +86,22 @@
         {
             "trait": "",
             "titre": "Mon portfolio photo",
-            "description": "L’un des premiers site que j’ai fait est un portfolio pour mes photos, je m’étais notamment amusée à utiliser la fonction grid en CSS pour exposer mon travail"
+            "description": "Je suis passionnée par la photo depuis toujours et l’un des premiers site que j’ai fait est un portfolio pour mes photos, je m’étais notamment amusée à utiliser la fonction grid en CSS pour exposer mon travail. "
         },
         {
             "trait": "",
             "titre": "Hackaton",
-            "description": "Nous avons remporter un prix lors du hackation .Ce projet à été fait dans le cadre d’un hackaton. Nous "
+            "description": "J'ai eu la chance de participer à un hackaton et de recevoir avec mon groupe le premier prix. Ce projet a été présenté devant une cinquantaine d'entreprise et avait pour thème une problématique donnée par ces mêmes entreprises qui est l'intégration aux projets de l'entreprise des nouveaux employé et novices au seins des équipes"
         },
         {
             "trait": "",
             "titre": "Projet de groupe",
-            "description": "Landing page d'un projet de groupe pour une applis pour sdf"
+            "description": "Durant ma formation dev web au seins de l'EM Lyon j'ai eu l'opportunité de travailler en groupe sur l'une des problématique de l'ONU. Notre thème etait les droits sociaux et nous avions formulé comme problématique :'Comment permettre aux acteurs sociaux de donner accès aux personnes sans domicile fixe à  des informations sur les aides sociales ?'"
+        },
+        {
+            "trait": "",
+            "titre": "Petit jeux en Python",
+            "description": "J'ai fait ce projet durant mon stage on sein de Inetum dans le but de mon apprentissage et mon acculturation au language de programmation python. Mon futur objectif est de faire apprendre à une IA en reinforcment learning à y jouer."
         }
     ],
     "chatbotTitle": "Mon chatbot",

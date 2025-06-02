@@ -122,7 +122,8 @@ a {
 
 #fondjaune {
     background-color: #F2E9A9;
-    height: 1800px;
+    padding-bottom: 50px;
+    padding-top: 50px;
 }
 
 #fondviolet {
@@ -152,7 +153,6 @@ a {
     justify-content: center;
     background-color: #E5F5FF;
     width: 89%;
-    height: 220px;
     border: #052032 solid 1px;
     border-radius: 25px;
     align-items: center;
