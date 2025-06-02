@@ -1,0 +1,120 @@
+{
+ 
+    
+    "header-name": "Salomé SOUQUE",
+    "work-nav": "Travail",
+    "create-nav": "Créer",
+    "about-nav": "À propos",
+    "contact-nav": "Contact",
+    "intro-heading": "MON POTENTIEL, VOTRE SOUTIEN",
+    
+        "text-1": "S",
+        "text-2": "Salomé SOUQUE",
+        "text-3": "MY POTENTIAL, YOUR SUPPORT",
+        "text-4": "English",
+        "text-5": "Français",
+        "text-6": "LA TOILE- EMLYON BUSINESS SCHOOL",
+        "text-7": "Trust me in graduating in AI. I entered in last October in a four month formation within de emlyon business school with the objectif of introduce myself to info. During this period I have learned in two month to master the basics of three language: HTML, CSS and JAVAScript. Moreover, I have acquire skills with different software such as figma, Airtable, Zapier, Webflow (...). You can see down-below the work I have done during this time :",
+        "text-8": "S",
+        "text-9": "Salomé Souque",
+        "text-10": "Qui suis-je ?",
+        "text-11": "Salut, je m'appel Salomé SOUQUE, j'ai 20ans. Je sors d'une formation au seins de l'emlyon business school en mise à niveau de développement web avec des bases de gestion de projet et du pack word. Je suis diplômée d'un bac générale mention bien et à la sortie de mon bac je me suis construit une expérience professionnelle pendant 2année en travaillant dans la vente mais aussi la logistique dans un hopital. D'un point de vue personnel, je suis passionnée par la photographie, l'esthétisme mais aussi et surtout par les nouvelles technologies et le monde de l'informatique. Je suis quelqu'un de plutôt créative, ce qui ne m'empêche pas d'avoir une vraie rigueur que j'applique dans mon quotidien et dans mon travail. J'ai pour ambition de me former dans le domaine de l'IA, avec une alternance au sein de simplon.",
+        "text-12": "Soft skills",
+        "text-13": "Organisée Autonome Minutieuse Créative",
+        "text-14": "Scolarship",
+        "text-15": "LYCEE JEAN-PERRIN",
+        "text-16": "Fillière générale",
+        "text-17": "* Bac mention bien",
+        "text-18": "* Anglais C1",
+        "text-19": "* Spécialités : Math, AMC & HGGSP",
+        "text-20": "* Cetification PIX",
+        "text-21": "* Club cinéma",
+        "text-22": "* Eco-déléguée",
+        "text-23": "EM-LYON BUSINES SCHOOL",
+        "text-24": "Latoile",
+        "text-25": "* Certification Développement Web",
+        "text-26": "* Hackaton",
+        "text-27": "* HTML, CSS, JavaScript, Webflow",
+        "text-28": "* Design",
+        "text-29": "* Gestion de projet",
+        "text-30": "* Figma, Zappier, Airtable",
+        "text-31": "* Base pack office",
+        "text-32": "Work experience",
+        "text-33": "Magasinière",
+        "text-34": "Hopital gériatrique de Fourvière",
+        "text-35": "* Logistique",
+        "text-36": "* Mail /Devis",
+        "text-37": "* Appels / Traitement de demandes",
+        "text-38": "* Gestion de stock",
+        "text-39": "* Travail en groupe",
+        "text-40": "Conceillière de vente",
+        "text-41": "Go-sport, Auchan",
+        "text-42": "*Vente",
+        "text-43": "* Relation client",
+        "text-44": "* Mise de rayon / Facing",
+        "text-45": "* Organisaton",
+        "text-46": "Other Passion",
+        "text-47": "Photography",
+        "text-48": "Eiffel tower in fog",
+        "text-49": "-Paris-01-2025-",
+        "text-50": "BonjourJe m’appel Salomé SOUQUE, j’ai 20ans. Je suis actuellement étudiante à l’em lyon dans une formation de mise à niveau en développement web avec des bases de gestion de projet et du pack word. Sinon je suis diplômée d’un bac générale mention bien et à la sortie de mon bac j’ai trouvé un appartement et je me suis construit une expérience professionnelle pendant",
+        "text-51": "My portfolio",
+        "text-52": "The sailboat",
+        "text-53": "-Annecy-05-2024-",
+    
+    
+
+
+    "title": "Mon Portfolio",
+    "description": "Bienvenue sur mon portfolio. Je suis développeur web.",
+    "cards": [
+        {
+            "trait": "",
+            "titre": "Site en Javascript avec fichier Json",
+            "description": "J’ai fait ce site lors de ma formation au sen de l’em Lyon. Nous avions pour consigne d’utiliser un fichier Json prérempli et de créer le site principalement en Javascript et CSS. "
+        },
+        {
+            "trait": "",
+            "titre": "Site créé via Web-flow",
+            "description": "Au cours de ma formation en développement web nous avons aussi touché au no-code. J’ai fait ce site en imaginant à quoi ressemblerais le portfolio d’un photographe anglais dont j’apprécie le travail."
+        },
+        {
+            "trait": "",
+            "titre": "Gestionnaire de tâche JAvascript",
+            "description": "Cette page est l’une des première que j’ai faite en Javascrpit, il s’agit simplement d’un gestionnaire de tâche."
+        },
+        {
+            "trait": "",
+            "titre": "Mon portfolio photo",
+            "description": "L’un des premiers site que j’ai fait est un portfolio pour mes photos, je m’étais notamment amusée à utiliser la fonction grid en CSS pour exposer mon travail"
+        },
+        {
+            "trait": "",
+            "titre": "Hackaton",
+            "description": "Nous avons remporter un prix lors du hackation .Ce projet à été fait dans le cadre d’un hackaton. Nous "
+        },
+        {
+            "trait": "",
+            "titre": "Projet de groupe",
+            "description": "Landing page d'un projet de groupe pour une applis pour sdf"
+        }
+    ],
+    "chatbotTitle": "Mon chatbot",
+    "questionBubbleText": "Une question ?",
+    "userInputPlaceholder": "Écrire un message...",
+    "sendButtonText": "Envoyer",
+    "welcomeMessage": "Bonjour ! Choisissez une question en entrant un numéro (1-10) :",
+    "questions": [
+        "Quel est ton nom ?",
+        "Que fais-tu ?"
+    ],
+    "responses": [
+        "Je suis ChatGPT, un assistant IA créé par OpenAI.",
+        "Je suis un assistant virtuel conçu pour répondre à des questions et aider avec divers projets."
+    ],
+    "invalidMessage": "Veuillez entrer un numéro de question valide (1-2).", 
+    "test" :[
+        "un",
+        "deux"
+    ]
+}

@@ -12,13 +12,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Gaegu&family=Inconsolata:wght@200..900&family=Rubik+Bubbles&display=swap"
         rel="stylesheet">
-    <script src="https://kit.fontawesome.com/7d0431a48f.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/fa70735070.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/7d0431a48f.js" crossorigin="anonymous"></script> -->
     <title>Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <header class="texte">
+    <!-- <header class="texte">
         <div id="navflex">
             <div class="nav">
                 <div class="leftnav">
@@ -27,10 +28,10 @@
                     <p>Salomé SOUQUE</p>
                 </div>
                 <nav class="texte rightnav">
-                    <p class="motnav"><a href="#fondjaune">Work</a></p>
-                    <p class="motnav"><a href="#fondviolet">Create</a></p>
-                    <p class="motnav"><a href="#fondrouge">About me</a></p>
-                    <p class="motnav"><button class="bouton texte">Contact</button></p>
+                    <p data-lang="work-nav" class="motnav"><a href="#fondjaune"></a></p>
+                    <p data-lang="create-nav" class="motnav"><a href="#fondviolet"></a></p>
+                    <p data-lang="about-nav" class="motnav"><a href="#fondrouge"></a></p>
+                    <p  class="motnav"><button data-lang="contact-nav" class="bouton texte"></button></p>
                 </nav>
             </div>
         </div>
@@ -39,6 +40,12 @@
         </div>
     </header>
     <section id="allsection" class="texte">
+        <select id="language-selector">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+        </select>
+
+
         <div class="parent" id="fondjaune">
             <div class="bloctexte">
                 <h2>LA TOILE- EMLYON BUSINESS SCHOOL</h2>
@@ -223,7 +230,223 @@
         </div>
     
 
+    </section> -->
+
+
+    <header class="texte">
+        <div id="navflex">
+            <div class="nav">
+                <div class="leftnav">
+                    <a data-lang="text-1" href="index.html" id="slogo"></a>
+                    <div id="trait"></div>
+                    <p data-lang="text-2"></p>
+                </div>
+                <nav class="texte rightnav">
+                    <p class="motnav" data-lang="work-nav"><a href="#fondjaune"></a></p>
+                    <p class="motnav" data-lang="create-nav"><a href="#fondviolet"></a></p>
+                    <p class="motnav" data-lang="about-nav"><a href="#fondrouge"></a></p>
+                    <p class="motnav"><button class="bouton texte" data-lang="contact-nav"></button></p>
+                </nav>
+            </div>
+        </div>
+        <div class="imgintro">
+            <h1 class="heading" data-lang="text-3"></h1>
+        </div>
+    </header>
+    <section class="texte" id="allsection">
+        <select id="language-selector">
+            <option data-lang="text-4" value="en"></option>
+            <option data-lang="text-5" value="fr"></option>
+        </select>
+        <div class="parent" id="fondjaune">
+            <div class="bloctexte">
+                <h2 data-lang="text-6"></h2>
+                <div class="traitun"></div>
+                <p data-lang="text-7" id="pUn"></p>
+            </div>
+            <div id="separation"></div>
+            <div id="DivJS"></div>
+        </div>
+        <div class="parent" id="fondrouge">
+            <div id="barrerecherche">
+                <a data-lang="text-8" href="index.html" id="slogo"></a>
+                <h2 data-lang="text-9"></h2>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div id="aboutme">
+                <div class="titleaboutme" id="whoIAm">
+                    <div class="titreTrait">
+                        <h3 class="htroisRouge" data-lang="text-10"></h3>
+                        <div class="traitRougeUn"></div>
+                    </div>
+                    <p class="contentRouge" data-lang="text-11"></p>
+                </div>
+                <div class="titleaboutme" id="skills">
+                    <div class="titreTrait">
+                        <h3 class="htroisRouge" data-lang="text-12"></h3>
+                        <div class="traitRougeUn"></div>
+                    </div>
+                    <p data-lang="text-13"></p>
+                </div>
+                <div class="titleaboutme" id="scolarship">
+                    <div class="titreTrait">
+                        <h3 class="htroisRouge" data-lang="text-14"></h3>
+                        <div class="traitRougeUn"></div>
+                    </div>
+                    <div class="contentRouge">
+                        <div id="lycee">
+                            <div class="contentRougeTitre">
+                                <h4 class="hquatreRouge" data-lang="text-15"></h4>
+                                <h5 class="hcinqRouge" data-lang="text-16"></h5>
+                            </div>
+                            <div class="traitRougeDeux"></div>
+                            <div class="contentRougeDott">
+                                <div class="contentRougeDottUn">
+                                    <p data-lang="text-17"></p>
+                                    <p data-lang="text-18"></p>
+                                </div>
+                                <div>
+                                    <p data-lang="text-19"></p>
+                                    <p data-lang="text-20"></p>
+                                    <p data-lang="text-21"></p>
+                                    <p data-lang="text-22"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="emlyon">
+                            <div class="contentRougeTitre">
+                                <h4 class="hquatreRouge" data-lang="text-23"></h4>
+                                <h5 class="hcinqRouge" data-lang="text-24"></h5>
+                            </div>
+                            <div class="traitRougeDeux"></div>
+                            <div class="contentRougeDott">
+                                <div class="contentRougeDottUn">
+                                    <p data-lang="text-25"></p>
+                                    <p data-lang="text-26"></p>
+                                </div>
+                                <div>
+                                    <p data-lang="text-27"></p>
+                                    <p data-lang="text-28"></p>
+                                    <p data-lang="text-29"></p>
+                                    <p data-lang="text-30"></p>
+                                    <p data-lang="text-31"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="titleaboutme" id="workExp">
+                    <div class="titreTrait">
+                        <h3 class="htroisRouge" data-lang="text-32"></h3>
+                        <div class="traitRougeUn"></div>
+                    </div>
+                    <div class="contentRouge">
+                        <div id="hopital">
+                            <div class="contentRougeTitre">
+                                <h4 class="hquatreRouge" data-lang="text-33"></h4>
+                                <h5 class="hcinqRouge" data-lang="text-34"></h5>
+                            </div>
+                            <div class="traitRougeDeux"></div>
+                            <div class="contentRougeDott">
+                                <div class="contentRougeDottUn">
+                                    <p data-lang="text-35"></p>
+                                </div>
+                                <div>
+                                    <p data-lang="text-36"></p>
+                                    <p data-lang="text-37"></p>
+                                    <p data-lang="text-38"></p>
+                                    <p data-lang="text-39"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="vente">
+                            <div class="contentRougeTitre">
+                                <h4 class="hquatreRouge" data-lang="text-40"></h4>
+                                <h5 class="hcinqRouge" data-lang="text-41"></h5>
+                            </div>
+                            <div class="traitRougeDeux"></div>
+                            <div class="contentRougeDott">
+                                <div class="contentRougeDottUn">
+                                    <p data-lang="text-42"></p>
+                                </div>
+                                <div>
+                                    <p data-lang="text-43"></p>
+                                    <p data-lang="text-44"></p>
+                                    <p data-lang="text-45"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="comboviolet">
+            <div class="parent" id="introfondviolet">
+                <div id="titleviolet">
+                    <div>
+                        <h5 id="hcinqViolettitle" data-lang="text-46"></h5>
+                        <h4 id="hquatreViolettitle" data-lang="text-47"></h4>
+                    </div>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+            <div class="parent" id="fondviolet" id="contentviolet">
+                <div id="contentvioletUn">
+                    <img src="eiffel.jpg" alt="eiffel tower" id="img">
+                    <div>
+                        <h4 class="hquatreViolet" data-lang="text-48"></h4>
+                        <h5 class="hcinqViolet" data-lang="text-49"></h5>
+                    </div>
+                </div>
+                <div id="contentvioletDeux">
+                    <p id="pviolet" data-lang="text-50"></p>
+                    <button class="bigbuton"><a href="">My portfolio</a></button>
+                </div>
+                <div id="contentvioletTrois">
+                    <div id="contentviolettroish">
+                        <h4 class="hquatreViolet" data-lang="text-52"></h4>
+                        <h5 class="hcinqViolet" data-lang="text-53"></h5>
+                    </div>
+                    <img src="boat.jpg" alt="eiffel tower" id="img">
+                </div>
+            </div>
+        </div>
     </section>
+    
+
+
+    <!-- ChatBot -->
+<button id="chat-btn">
+    <i class="fa-solid fa-robot"></i>
+</button>
+<div id="question-bubble" class="question-bubble">
+    <span data-lang="questionBubbleText">Une question ?</span>
+    <div id="close-question-bubble" class="close-bubble"><i  class="fa-solid fa-xmark" id="croix"></i></div>
+    
+    
+    <!-- <button id="close-question-bubble" class="close-bubble"></button> -->
+</div>
+
+<div id="chat-window">
+    <div class="top-bar" >
+        <div data-lang="chatbotTitle"></div>
+        <button id="close-chatbox" class="close-bubble" >×</button> 
+        </div>
+    <div id="chatbox">
+       <p data-lang="welcomeMessage" class="chat-bubble bot">a</p>
+       <div id="questionsliste"></div>
+       <div id="answer"></div>
+        <!-- Contenu des messages ici -->
+    </div>
+    <div class="bottom-bar">
+        <input type="text" data-lang="userInputPlaceholder" id="user-input" placeholder="Écrire un message..." />
+        <button id="send-btn"data-lang="sendButtonText">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </div>
+</div>
+
+
     <footer class="texte" id="fondbleu">
         <div id="footer">
             <div id="topfooter">
@@ -242,42 +465,12 @@
         </div>
 
     </footer>
-    <button id="chat-btn">
-        <i class="fa-solid fa-robot"></i>
-    </button>
-<!-- ChatBot créer avec ChatGPT4 -->
-<!-- Bulle "Une question ?" au-dessus du bouton du chatbot -->
-<div id="question-bubble" class="question-bubble">
-    <span>Une question ?</span>
-    <button id="close-question-bubble" class="close-bubble">×</button> <!-- Croix de fermeture -->
-</div>
 
 
-    <div id="chat-window">
-        <div class="top-bar">Mon chatbot</div>
-        <div id="chatbox">
-            <div class="chat-bubble bot">Bonjour ! Choisissez une question en entrant un numéro (1-10) :</div>
-            <div class="chat-bubble bot">1. Quel est ton nom ?</div>
-            <div class="chat-bubble bot">2. Que fais-tu ?</div>
-            <div class="chat-bubble bot">3. Où es-tu situé ?</div>
-            <div class="chat-bubble bot">4. Quels sont tes services ?</div>
-            <div class="chat-bubble bot">5. Comment puis-je te contacter ?</div>
-            <div class="chat-bubble bot">6. As-tu des références ?</div>
-            <div class="chat-bubble bot">7. Quel est ton expérience ?</div>
-            <div class="chat-bubble bot">8. Combien de temps prends-tu pour un projet ?</div>
-            <div class="chat-bubble bot">9. Quels outils utilises-tu ?</div>
-            <div class="chat-bubble bot">10. Quel est ton tarif ?</div>
-        </div>
-        <div class="bottom-bar">
-            <input type="number" id="user-input" placeholder="Entrez un numéro de question..." autocomplete="off">
-            <button id="send-btn">
-                <i class="fa-solid fa-arrow-up"></i>
-            </button>
-        </div>
-    </div>
 
-    <script src="chatbot.js"></script>
-    <script src="script.js"> </script>
+
+    
+<script src="script.js"></script>
 </body>
 
 </html>

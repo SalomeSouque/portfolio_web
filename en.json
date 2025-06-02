@@ -1,0 +1,124 @@
+{
+    "header-name": "Salomé SOUQUE",
+    "work-nav": "Work",
+    "create-nav": "Create",
+    "about-nav": "About me",
+    "contact-nav": "Contact",
+
+
+    
+      "text-1": "S",
+      "text-2": "Salomé SOUQUE",
+      "text-3": "MY POTENTIAL, YOUR SUPPORT",
+      "text-4": "English",
+      "text-5": "French",
+      "text-6": "LA TOILE- EMLYON BUSINESS SCHOOL",
+      "text-7": "Trust me in graduating in AI. I entered in last October in a four month formation within de emlyon business school with the objectif of introduce myself to info. During this period I have learned in two month to master the basics of three language: HTML, CSS and JAVAScript. Moreover, I have acquire skills with different software such as figma, Airtable, Zapier, Webflow (...). You can see down-below the work I have done during this time :",
+      "text-8": "S",
+      "text-9": "Salomé Souque",
+      "text-10": "Who am I",
+      "text-11": "Hi, I'm Salomé SOUQUE, I'm 20 years old. I recently completed a training program at emlyon business school in web development with project management basics and the Microsoft Office suite. I hold a general baccalaureate with honors, and after graduating, I built professional experience over 2 years working in sales and logistics in a hospital. On a personal level, I am passionate about photography, aesthetics, and especially new technologies and the world of IT. I am a creative person, but that doesn't stop me from having real rigor that I apply in my daily life and work. I aspire to train in the field of AI, with an apprenticeship at Simplon.",
+      "text-12": "Soft skills",
+      "text-13": "Organized Autonomous Meticulous Creative",
+      "text-14": "Scolarship",
+      "text-15": "LYCEE JEAN-PERRIN",
+      "text-16": "General stream",
+      "text-17": "* Baccalaureate with honors",
+      "text-18": "* English C1",
+      "text-19": "* Specialties: Math, AMC & HGGSP",
+      "text-20": "* PIX Certification",
+      "text-21": "* Cinema Club",
+      "text-22": "* Eco-delegate",
+      "text-23": "EM-LYON BUSINESS SCHOOL",
+      "text-24": "Latoile",
+      "text-25": "* Web Development Certification",
+      "text-26": "* Hackathon",
+      "text-27": "* HTML, CSS, JavaScript, Webflow",
+      "text-28": "* Design",
+      "text-29": "* Project Management",
+      "text-30": "* Figma, Zappier, Airtable",
+      "text-31": "* Basic Office Pack",
+      "text-32": "Work experience",
+      "text-33": "Storekeeper",
+      "text-34": "Hopital gériatrique de Fourvière",
+      "text-35": "* Logistics",
+      "text-36": "* Mail /Quotes",
+      "text-37": "* Calls / Request processing",
+      "text-38": "* Stock management",
+      "text-39": "* Teamwork",
+      "text-40": "Sales Advisor",
+      "text-41": "Go-sport, Auchan",
+      "text-42": "*Sales",
+      "text-43": "* Customer Relations",
+      "text-44": "* Shelf stocking / Facing",
+      "text-45": "* Organization",
+      "text-46": "Other Passion",
+      "text-47": "Photography",
+      "text-48": "Eiffel tower in fog",
+      "text-49": "-Paris-01-2025-",
+      "text-50": "Today I am called Salomé SOUQUE, I am 20 years old. I am currently a student at em lyon in an upgrade training in web development with project management basics and word pack. Otherwise, I graduated from a general baccalaureate with good mention and at the end of my baccalauréat I found an apartment and I built myself a professional experience during",
+      "text-51": "My portfolio",
+      "text-52": "The sailboat",
+      "text-53": "-Annecy-05-2024-",
+  
+
+  
+    "intro-heading": "MY POTENTIAL, YOUR SUPPORT",
+
+        "title": "My Portfolio",
+        "description": "Welcome to my portfolio. I am a web developer.",
+
+    "cards": [
+      {
+        "trait":"",
+        "titre": "Titre eng",
+        "description": "Description eng"
+      },
+      {
+        "a-url":"https://www.instagram.com/consent/?flow=ad_free_subscription&params_json=%7B%22afs_variant%22%3A%22first_time%22%2C%22qp_id%22%3A%221231951304188140%22%2C%22gcl_experience_id%22%3A%221aac7073-2b9e-4118-95b3-3194c26597d8%22%7D&source=instagram_dismissible_2",
+        "trait":"",
+        "titre": "Titre eng",
+        "description": "Description eng"
+      },
+      {
+        "trait":"",
+        "titre": "Titre eng",
+        "description": "Description eng"
+      },
+      {
+        "trait":"",
+        "titre": "Titre eng",
+        "description": "Description eng"
+      },
+      {
+        "trait":"",
+        "titre": "Titre eng",
+        "description": "Description eng"
+      },
+      {
+        "trait":"",
+        "titre": "Titre eng",
+        "description": "Description eng"
+      }
+    ],
+   
+    
+    "chatbotTitle": "My Chatbot",
+    "questionBubbleText": "A question?",
+    "userInputPlaceholder": "Type a message...",
+    "sendButtonText": "Send",
+    "invalidMessage": "Please enter a valid question number (1-2).",
+    "welcomeMessage": "Hello! Choose a question by entering a number (1-10):",
+    
+    "questions": [
+    "What is your name?",
+    "What do you do?"],
+    
+    "responses": [
+    "I am ChatGPT, an AI assistant created by OpenAI.",
+    "I am a virtual assistant designed to answer questions and help with various projects."],
+"test" :[
+        "one",
+        "two"
+    ]
+}

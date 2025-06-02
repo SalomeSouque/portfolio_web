@@ -1,132 +1,161 @@
-fetch("./texte.json")   //J'appel mon fichier json qui est sur une autre page
-    .then(response =>{
+enterrorMessage =[]
+let currentResponses = [];
+let isLoadingLanguage = false;
+
+async function changeLanguage(language) {
+    if (isLoadingLanguage) {
+        return;
+    }
+
+    isLoadingLanguage = true;
+
+
+    try {
+        // Déterminer le nom du fichier JSON en fonction de la langue
+        const fileName = language === 'fr' ? 'fr.json' : 'en.json';
+
+
+        const response = await fetch(fileName);
         if (!response.ok) {
-            throw new Error ("Failed to load JSON data")
-        } 
-        return response.json()
-            
-        
-    })
-    .then(data =>{
+            throw new Error('Erreur lors du chargement du fichier de langue');
+        }
+        const translations = await response.json();
+        console.log('Traductions chargées:', translations); // Vérifiez les données chargées
 
-    // console.log(data);
-    
+        for (const [key, value] of Object.entries(translations)) {
+            const element = document.querySelector(`[data-lang="${key}"]`);
+            if (element) {
+                element.textContent = value;
+            }
+        }
 
-    
-    
-    for (let key in data) {
+        updateCards(translations.cards);
+        updateChatbotDynamicContent(translations.questions, translations.responses, translations.invalidMessage, translations.test);
 
-        let keys = Object.keys(data);
-        // console.log(keys);
-
-        let divjs = document.getElementById ("DivJS");
-        let indeximage =0;
-        let indexlink =0;
-        // let cardall = document.createElement ("div");
-        let tableau = [];
-        // myArray.push(myObject)
-
-        data.web.forEach(element => {
-            indexlink ++
-            let card = document.createElement ("div");
-            card.id = "cardjs"+indexlink
-            card.className = "cardjs";
-            divjs.appendChild(card);
-            tableau.push(card)
-            
-
-            // card[1].addEventListener("click", function (eve) {        //Je crée une fonction qui va servir à supprimer le li lors du click sur le bouton
-            //     eve.preventDefault ();                              //           
-            //     window.location.href = 'https://www.1formatik.com/creer-lien-hypertexte-html-js';                                 // Je met mon li sur mon ul
-            // })
-            
-            // Array.prototype.push.apply(card)
-            // console.log(tableau);
-            
-            let test = document.createElement ("a");
-            test.className = "testlien";
-            test.src = element["a-url"];
-            card.appendChild(test)
-// console.log(card);
+    } catch (error) {
+        console.error('Erreur lors du changement de langue:', error);
+    } finally {
+        isLoadingLanguage = false;
+    }
+}
 
 
-        indeximage++
-        let image = document.createElement ("div");
-        image.id = "image"+indeximage;
+
+
+
+function updateCards(cardsData) {
+    let divjs = document.getElementById("DivJS");
+    if (!divjs) {
+        console.error('Conteneur de cartes non trouvé');
+        return;
+    }
+    divjs.innerHTML = ""; // Réinitialiser le contenu avant de remplir
+
+    let indeximage = 0;
+    let indexlink = 0;
+    let tableauCard = [];
+
+
+
+    cardsData.forEach(element => {
+        indexlink++;
+        let card = document.createElement("div");
+        card.id = "cardjs" + indexlink;
+        card.className = "cardjs";
+        divjs.appendChild(card);
+        tableauCard.push(card)
+
+        // Ajouter le lien
+        let link = document.createElement("a");
+        link.className = "lien";
+        link.href = element["a-url"];
+        card.appendChild(link);
+
+        // Ajouter l'image
+        indeximage++;
+        let image = document.createElement("div");
+        image.id = "image" + indeximage;
         image.textContent = element.image;
         card.appendChild(image);
-        // console.log(image);
-        
-        
+
+        // Ajouter le trait
         let trait = document.createElement("div");
         trait.className = "traitjs";
         trait.textContent = element.trait;
         card.appendChild(trait);
 
+        // Ajouter le titre
         let titre = document.createElement("h2");
         titre.className = "titrejs";
         titre.textContent = element.titre;
         card.appendChild(titre);
 
+        // Ajouter la description
         let description = document.createElement("p");
         description.className = "descriptionjs";
         description.textContent = element.description;
         card.appendChild(description);
+    });
 
-     
-    
+    console.log(tableauCard);
+    tableauCard[0].addEventListener("click", function (eve){
+        eve.preventDefault ();
 
-        });
-        // tableau.push(divjs)
-            console.log(tableau);
-                tableau[1].addEventListener("click", function (eve) {        //Je crée une fonction qui va servir à supprimer le li lors du click sur le bouton
-                eve.preventDefault ();
-                                              //           
-                window.location.href = 'https://yuka.io/';                                 // Je met mon li sur mon ul
-            })
+        window.location.href = 'https://salomesouque.github.io/Rendu_JS/';
+    }),
+    tableauCard[1].addEventListener("click", function (eve){
+        eve.preventDefault ();
 
-            function opentab (params) {
-                
-            }
+        window.location.href = 'https://yuka.io/';
+    }),
+    tableauCard[2].addEventListener("click", function (eve){
+        eve.preventDefault ();
+
+        window.location.href = 'https://yuka.io/';
+    }),
+    tableauCard[3].addEventListener("click", function (eve){
+        eve.preventDefault ();
+
+        window.location.href = 'https://yuka.io/';
+    }),
+    tableauCard[4].addEventListener("click", function (eve){
+        eve.preventDefault ();
+
+        window.location.href = 'https://yuka.io/';
+    }),
+    tableauCard[5].addEventListener("click", function (eve){
+        eve.preventDefault ();
+
+        window.location.href = 'https://yuka.io/';
+    })
+}
 
 
-        // let test = document.createElement (a);
-        // text.className = "testlien";
-        // test.src = element["a-url"];
-        // card.appendChild(test)
-    }})
 
 
 
-    //ChatBot créé avec ChatGPT4
-   
-document.addEventListener("DOMContentLoaded", function() {
-    // Définition des questions et des réponses
-    const questions = [
-        "Quel est ton nom ?",
-        "Que fais-tu ?",
-        "Où es-tu situé ?",
-        "Quels sont tes services ?",
-        "Comment puis-je te contacter ?",
-        "As-tu des références ?",
-        "Quel est ton expérience ?",
-        "Combien de temps prends-tu pour un projet ?",
-        "Quels outils utilises-tu ?",
-        "Quel est ton tarif ?"
-    ];
 
-    const responses = [
-        "Je suis ChatGPT, un assistant IA créé par OpenAI.",
-        "Je suis un assistant virtuel conçu pour répondre à des questions et aider avec divers projets.",
-        "Je suis un programme informatique, donc je n'ai pas de localisation physique.",
-        "Je peux aider à répondre à des questions fréquentes ou à résoudre des problèmes basés sur l'IA.",
-        "Tu peux me contacter directement sur ce site.",
-        "Je suis un assistant basé sur l'IA et n'ai pas de références en tant qu'entité humaine.",
-        "Je n'ai pas d'expérience humaine, mais je suis entraîné sur une vaste quantité de données textuelles.",
-        "Le temps nécessaire dépend du projet, mais je peux t'aider à déterminer des délais.",
-        "Je fonctionne grâce à des modèles d'intelligence artificielle, comme GPT-3, et d'autres outils d'apprentissage automatique.",
-        "Je suis gratuit à utiliser !"
-    ];
+
+
+
+
+function updateChatbotDynamicContent(questionsData, responsesData, invalidMessage) {
+    console.log('Questions chargées:', questionsData);
+    console.log('Réponses chargées:', responsesData);
+
+    let questionsliste = document.getElementById('questionsliste');
+    if (!questionsliste) {
+        console.error('Conteneur de questions non trouvé');
+        return;
+    }
+
+    questionsliste.innerHTML = ''; // Effacer les questions existantes
+
+    // Afficher les questions
+    questionsData.forEach((question, index) => {
+        questionsliste.innerHTML += `<div class="chat-bubble bot">${index + 1}. ${question}</div>`;
+    });
+
 
     // Fonction pour ouvrir/fermer le chat avec l'effet de scaling
     function toggleChat() {
@@ -146,53 +175,74 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Fonction pour envoyer un message et afficher la réponse
+
+
+
+
+
+    // Mettre à jour les réponses actuelles
+    currentResponses = responsesData;
+    currenterrorMessage = invalidMessage
+    // Fonction pour obtenir la réponse du bot
+    function getBotResponse(questionNumber) {
+        return currentResponses[questionNumber - 1];
+    }
+
+    // Fonction pour envoyer un message
     function sendMessage() {
-        let userInput = document.getElementById('user-input').value.trim();
-        let chatbox = document.getElementById('chatbox');
-    
-        if (userInput && userInput >= 1 && userInput <= 10) {
-            // Ajouter le message de l'utilisateur
-            chatbox.innerHTML += `<div class="chat-bubble user">Question ${userInput}</div>`;
-    
+        let userInput = document.getElementById('user-input').value.trim(); // Récupérer l'entrée utilisateur
+        let answer = document.getElementById('answer');
+        let validInput = parseInt(userInput); // Vérifier si c'est un nombre entier
+
+        // Vérifier si l'entrée est un nombre valide et compris entre 1 et le nombre de questions
+        if (!isNaN(validInput) &&validInput >= 1 && validInput <= questionsData.length) {
+            answer.innerHTML += `<div class="chat-bubble user">Question ${validInput}</div>`;
+
             // Ajouter l'animation des trois points de suspension
             let typingIndicator = document.createElement('div');
             typingIndicator.classList.add('chat-bubble', 'bot', 'typing');
             typingIndicator.innerHTML = '<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span>';
-            chatbox.appendChild(typingIndicator);
+            answer.appendChild(typingIndicator);
             
             // Faire défiler automatiquement la fenêtre de chat
             chatbox.scrollTop = chatbox.scrollHeight;
     
             // Effacer l'entrée de l'utilisateur immédiatement
             document.getElementById('user-input').value = '';
-    
+
+
             // Après 3 secondes, remplacer les points de suspension par la réponse du bot
             setTimeout(() => {
                 // Supprimer l'animation des points de suspension
-                chatbox.removeChild(typingIndicator);
+                answer.removeChild(typingIndicator);
     
                 // Réponse du chatbot
-                let response = getBotResponse(userInput);
-                chatbox.innerHTML += `<div class="chat-bubble bot">${response}</div>`;
+                let response = getBotResponse(validInput); // Récupérer la réponse basée sur l'entrée utilisateur
+            answer.innerHTML += `<div class="chat-bubble bot">${response}</div>`; // Afficher la réponse
     
                 // Faire défiler automatiquement la fenêtre de chat après la réponse
                 chatbox.scrollTop = chatbox.scrollHeight;
             }, 3000); // 3 secondes d'animation
-        } else {
-            // Message d'erreur si le numéro est invalide
-            chatbox.innerHTML += `<div class="chat-bubble bot">Veuillez entrer un numéro de question valide (1-10).</div>`;
-            document.getElementById('user-input').value = '';
+
+            
+
+
+
+        } else if (userInput !== '') {
+            // Si l'entrée est invalide, afficher le message d'erreur
+            answer.innerHTML += `<div class="chat-bubble user">Question ${validInput}</div>`;
             chatbox.scrollTop = chatbox.scrollHeight;
+            document.getElementById('user-input').value = ''; // Réinitialiser l'entrée utilisateur
+            setTimeout(() => {
+                answer.innerHTML += `<div class="chat-bubble bot">${currenterrorMessage}</div>`;
+            // document.getElementById('user-input').value = ''; // Réinitialiser l'entrée utilisateur
+            chatbox.scrollTop = chatbox.scrollHeight; // Scroll jusqu'au bas du chat
+            }, 600);
+            
         }
     }
-    
-    
 
-    // Fonction pour obtenir la réponse du bot en fonction du numéro de la question
-    function getBotResponse(questionNumber) {
-        return responses[questionNumber - 1];
-    }
+
 
     // Fonction pour fermer la bulle "Une question ?" quand on clique sur la croix
     function closeQuestionBubble() {
@@ -200,17 +250,64 @@ document.addEventListener("DOMContentLoaded", function() {
         questionBubble.style.display = 'none';
     }
 
-    // Attacher l'événement pour ouvrir/fermer le chat et fermer la bulle "Une question ?"
+
+
+    // Attacher l'événement pour ouvrir/fermer le chat
     document.getElementById('chat-btn').addEventListener("click", toggleChat);
     document.getElementById('close-question-bubble').addEventListener("click", closeQuestionBubble);
+    document.getElementById('close-chatbox').addEventListener("click", toggleChat);
 
-    // Attacher l'événement pour envoyer le message
-    document.getElementById('send-btn').addEventListener("click", sendMessage);
 
-    // Ajouter un écouteur pour la touche "Entrée"
-    document.getElementById('user-input').addEventListener('keydown', function(event) {
+
+    // Supprimer les anciens écouteurs d'événements avant d'en ajouter de nouveaux
+    const sendBtn = document.getElementById('send-btn');
+    const userInput = document.getElementById('user-input');
+
+    sendBtn.removeEventListener("click", sendMessage);
+    userInput.removeEventListener('keydown', handleEnterKey);
+
+    sendBtn.addEventListener("click", sendMessage);
+    userInput.addEventListener('keydown', handleEnterKey);
+
+    function handleEnterKey(event) {
         if (event.key === 'Enter') {
             sendMessage();
         }
-    });
+    }
+}
+
+document.getElementById('language-selector').addEventListener('change', (event) => {
+    const selectedLanguage = event.target.value;
+    changeLanguage(selectedLanguage);
 });
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const defaultLanguage = 'en'; // ou 'fr' selon votre préférence
+    changeLanguage(defaultLanguage);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
